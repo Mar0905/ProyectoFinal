@@ -1,0 +1,567 @@
+   body {
+        font-family: "Instrument Sans-Bold", Helvetica;
+        background-color: #d9d6d8;
+        margin: 0;
+        padding: 80px 0 0 0; /* top, right, bottom, left */
+        font-size: 20px;
+    }
+
+    a{
+        text-decoration: none;
+        color: white;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Instrument Sans-Bold", Helvetica;
+    }
+    
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 30px;
+        border-bottom: 1px solid #ccc;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        box-sizing: border-box;
+        height: 80px;
+        width: 100%;
+        background-color: #0f214d;
+        color: white;
+    }
+    
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    .logo span {
+        font-weight: bold;
+        font-size: 20px;
+        align-items: center;
+    }
+    
+    .logo a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+    }
+    
+    .brand-name {
+        display: inline;
+    }
+
+    .nav-menu {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+        position: relative;
+    }
+
+    .nav-item {
+        position: relative;
+    }
+
+    .dropdown-toggle {
+        cursor: pointer;
+    }
+
+    .dealership {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 20px;
+    }
+    
+    .icon {
+        display: none;
+        margin-right: 5px;
+    }
+
+    .label {
+        display: inline;
+    }
+
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: calc(100% + 20px);
+        left: 0;
+        background-color: white;
+        color: black;
+        min-width: 200px;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .nav-item.active .dropdown-menu {
+        display: block;
+      }
+
+      .dropdown-menu li a {
+        display: block;
+        padding: 10px 15px;
+        color: #0f214d;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .dropdown-menu li a:hover {
+        background-color: #f2f2f2;
+      }
+    
+      .floating-menu {
+        position: fixed;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        z-index: 1000;
+        background: white;
+        padding: 10px 5px;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+      .floating-btn {
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 50%;
+        font-size: 20px;
+        transition: background-color 0.3s ease, transform 0.2s;
+    }
+
+      .floating-btn:hover {
+        background-color: #f0f0f0;
+        transform: scale(1.1);
+    }
+
+      .floating-btn i {
+        color: #0f214d;
+    }
+      
+    .icon {
+        display: none;
+        margin-right: 5px;
+    }
+
+    .label {
+        display: inline;
+    }
+
+    .Banner {
+        position: relative;
+        display: block;
+    }
+
+    .Banner img {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        display: block;
+    }
+
+    .Banner h1 {
+        position: absolute;
+        top: 70%;
+        left: 10%;
+        font-size: clamp(1.8rem, 6vw, 3rem);
+        font-weight: 700;
+        color: white;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    .Banner p {
+        position: absolute;
+        top: 85%;
+        left: 10%;
+        font-size: clamp(1rem, 4vw, 1.5rem);
+        color: white;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    .FormularioTop {
+        padding: 2rem 5vw;
+    }
+
+    .FormularioTop p {
+        font-size: 1rem;
+        padding-top: 5px;
+        padding-left: 5px;
+    }
+
+    .FormularioTop h2 {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+        padding-left: 5vw;
+        text-align: center;
+    }
+
+    .formulario {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 1rem;
+        font-family: Arial, sans-serif;
+    }
+
+    .formulario .fila {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .formulario .campo {
+        flex: 1 1 300px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formulario label {
+        margin-bottom: 4px;
+        font-weight: 500;
+        font-size: 0.95rem;
+    }
+
+    .formulario input[type="text"],
+    .formulario input[type="number"],
+    .formulario input[type="email"] {
+        padding: 8px 12px;
+        border: 1px solid #999;
+        border-radius: 999px;
+        font-size: 14px;
+        outline: none;
+        transition: border-color 0.3s;
+        margin-bottom: 5px; /* Reduce el espacio entre campos */
+    }
+
+    .formulario input::placeholder {
+        color: #bbb;
+    }
+
+    .formulario input:focus {
+        border-color: #0B5FB0;
+    }
+
+    .select {
+        padding: 8px 12px;
+        border: 1px solid #999;
+        border-radius: 999px;
+        font-size: 14px;
+        outline: none;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .input_mes {
+        font-size: 1rem;
+        padding: 1rem;
+        border: 1px solid #124f90;
+        border-radius: 15px;
+        width: 100%;
+        max-width: 800px;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+
+    .condiciones {
+        padding: 1rem 5vw;
+        font-size: 0.95rem;
+        color: #999;
+        text-align: center;
+        margin-top: -10px;
+    }
+
+    .btnEnviar {
+        display: flex;
+        justify-content: center;
+        padding: 1rem 0;
+    }
+
+    .btnEnviar button {
+        font-family: Arial;
+        background-color: #0f214d;
+        height: 40px;
+        width: 250px;
+        border-radius: 30px;
+        border: 0;
+        color: white;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .btnEnviar button:hover {
+        background-color: #0b1736;
+    }
+
+    .footer {
+      background-color: #0d1121;
+      color: white;
+      padding: 40px 20px 20px;
+      font-family:"Instrument Sans-Bold", Helvetica;
+    }
+
+    .footer-contenido {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-columna {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .footer h3, .footer h4 {
+      margin-bottom: 10px;
+    }
+
+    .footer p, .footer a {
+      font-size: 14px;
+      color: #ddd;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      font-size: 13px;
+      border-top: 1px solid #0d3a6b;
+      margin-top: 20px;
+    }
+    
+    @media (max-width: 1024px) {
+        .icon {
+            display: inline;
+        }
+
+        .label,
+        .brand-name {
+            display: none;
+        }
+
+        .nav-menu {
+            gap: 15px;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .icon {
+            display: inline;
+        }
+
+        .label {
+            display: none;
+        }
+
+        .nav-menu {
+            gap: 15px;
+        }
+        
+        .brand-name {
+            display: none;
+        }
+
+        .FormularioTop h2 {
+            padding-left: 0;
+            text-align: center;
+        }
+
+        .formulario .fila {
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 0px;
+        }
+
+        .formulario .campo {
+            margin-bottom: 0;
+        }
+
+        .formulario input[type="text"],
+        .formulario input[type="number"],
+        .formulario input[type="email"],
+        .select {
+            margin-bottom: 0;
+        }
+
+        .input_mes {
+            padding: 1rem;
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .condiciones {
+            padding-left: 0;
+            font-size: 0.9rem;
+            margin-top: 0;
+        }
+
+        .Banner h1 {
+            top: 60%;
+        }
+
+        .Banner p {
+            top: 75%;
+        }
+    }
+        
+    .FormularioTop {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .FormularioTop h1, .FormularioTop p {
+      text-align: center;
+      color: #0d1121;
+      margin-bottom: 10px;
+    }
+
+    .FormularioTop label {
+      display: block;
+      margin: 15px 0 5px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .FormularioTop input[type="text"],
+    .FormularioTop input[type="email"],
+    .FormularioTop input[type="number"],
+    .FormularioTop select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: border-color 0.3s ease;
+    }
+
+    .FormularioTop input:focus,
+    .FormularioTop select:focus {
+      border-color: #007BFF;
+      outline: none;
+    }
+
+    .btnEnviar {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .btnEnviar button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btnEnviar button:hover {
+      background-color: #0056b3;
+    }
+
+    .condiciones {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .condiciones input[type="radio"] {
+      margin-right: 8px;
+    }
+
+    .modal.hidden {
+      display: none;
+    }
+
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+
+    .modal-content h2 {
+      margin-top: 0;
+      color: #003366;
+    }
+
+    .modal-content .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 28px;
+      cursor: pointer;
+      color: #888;
+    }
+
+    .modal-content button {
+      margin-top: 20px;
+      background-color: #28a745;
+      color: white;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .modal-content button:hover {
+      background-color: #218838;
+    }

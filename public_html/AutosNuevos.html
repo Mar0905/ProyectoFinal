@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Catálogo de Autos Nuevos</title>
+  <link rel="stylesheet" href="StyleCatalogo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="Principal.html">
+        <img src="Imagenes/Img/logo.png" alt="Logo" />
+        <span class="brand-name">MULTIMOVIL</span>
+      </a>
+    </div>
+
+    <nav class="nav">
+      <ul class="nav-menu">
+        <li class="nav-item dropdown" data-menu="autos">
+              <a href="#" class="dropdown-toggle"><i class="fas fa-car icon"></i> Autos</a>
+              <ul class="dropdown-menu">
+                <li><a href="AutosNuevos.html">Autos Nuevos</a></li>
+                <li><a href="Promociones.html">Promociones</a></li>
+                <li><a href="SoliCotizacion.html">Financiamiento</a></li>
+                <li><a href="Compra.html">Solicitar Cotizacion</a></li>
+                <li><a href="Garantia.html">Garantia</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown" data-menu="bicicletas">
+                <a href="#" class="dropdown-toggle"><i class="fas fa-bicycle icon"></i> Bicicletas</a>
+                <ul class="dropdown-menu">
+                    <li><a href="Bicicletas.html">Modelos</a></li>
+                    <li><a href="Comparacion.html">Comparación de modelos</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown" data-menu="pesaje">
+                <a href="#" class="dropdown-toggle"><i class="fas fa-balance-scale icon"></i> Equipos de Pesaje</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="EquipodePesaje.html">Balanzas</a></li>
+                        <li><a href="#">Conoce Más</a></li>
+                    </ul>
+            </li>
+
+            <li class="nav-item dropdown" data-menu="contacto">
+                <a href="#" class="dropdown-toggle"><i class="fas fa-phone icon"></i> Contáctanos</a>
+                <ul class="dropdown-menu">
+                    <li><a href="Concesionario.html">Encuentranos</a></li>
+                    <li><a href="Consultas.html">Consultas</a></li>
+                    <li><a href="Consultas.html">Reclamos</a></li>
+                    <li><a href="PreguntasFre.html">FAQ</a></li>
+                </ul>
+            </li>
+      </ul>
+    </nav>
+
+    <div class="dealership">
+      <a href="Concesionario.html" target="_blank">
+        <i class="fas fa-map-marker-alt icon"></i> Concesionarios
+      </a>
+    </div>
+  </header>
+
+  <div class="floating-menu">
+    <button onclick="location.href='AutosNuevos.html'" class="floating-btn" title="Autos"><i class="fas fa-car"></i></button>
+    <button onclick="location.href='Concesionario.html'" class="floating-btn" title="Contactanos"><i class="fas fa-headphones"></i></button>
+    <button onclick="location.href='Compra.html'" class="floating-btn" title="Compra"><i class="fas fa-shopping-cart"></i></button>
+  </div>
+
+  <div class="Banner">
+    <img src="Imagenes/ImgAutos/BannereCoches.png" alt="Concesionario" />
+    <h1>Encuentra tu modelo ideal</h1>
+  </div>
+
+  <h1>Catálogo de Autos</h1>
+
+      <div class="filtros">
+        <select id="filtro-categoria">
+            <option value="">Categoria</option>
+            <option value="usado">usado</option>
+            <option value="nuevo">nuevo</option>
+        </select>
+        
+        <select id="filtro-marca">
+            <option value="">Marca</option>
+            <option value="Toyota">Toyota</option>
+            <option value="Nissan">Nissan</option>
+            <option value="Ford">Ford</option>
+            <option value="Volkswagen">Volkswagen</option>
+            <option value="Jeep">Jeep</option>
+            <option value="Hyundai">Hyundai</option>
+            <option value="Chevrolet">Chevrolet</option>
+            <option value="Mazda">Mazda</option>
+            <option value="Suzuki">Suzuki</option>
+            <option value="Renault">Renault</option>
+            <option value="Honda">Honda</option>
+        </select>
+        
+        <select id="filtro-capacidad">
+            <option value="">Capacidad del motor</option>
+            <option value="1500">1,500 cc</option>
+            <option value="1800">1,800 cc</option>
+            <option value="2000">2,000 cc</option>
+            <option value="2500">2,500 cc</option>
+        </select>
+
+     
+        <select id="filtro-precio">
+            <option value="">Precio</option>
+            <option value="10000-15000">$10,000 a $15,000</option>
+            <option value="15000-20000">$15,000 a $20,000</option>
+            <option value="20000-25000">$20,000 a $25,000</option>
+            <option value="25000-30000">$25,000 a $30,000</option>
+        </select>
+        <button id="limpiar-filtros">Limpiar filtros</button>
+    <button id="btn-agregar-auto" class="boton-naranja">Agregar vehículo</button>
+  </div>
+
+  <!-- CONTENEDOR DE AUTOS -->
+  <div class="catalogo" id="catalogo-autos">
+        <div class="tarjeta" data-capacidad="2000" data-marca="Toyota" data-precio="23900">
+            <div class="imagen-con-etiqueta">
+              <img src="Imagenes/imgAutos/carolla2024.jpg" alt="Toyota Corolla">
+              <span class="estado1">Nuevo</span>
+            </div> 
+            <div class="nombre">Toyota Corolla 2024</div>
+            <div class="precio">$23,900</div>
+            <div class="etiqueta" data-categoria="nuevo">Auto nuevo</div>
+            <button class="botn-comprar"><a href="Autos/Auto1.html">Ver más</a></button>
+        </div>
+        
+        <div class="tarjeta" data-capacidad="1600" data-marca="Nissan" data-precio="20000">
+            <div class="imagen-con-etiqueta">
+              <img src="Imagenes/imgAutos/versa2022.jpg" alt="Nissan Versa">
+              <span class="estado1">Nuevo</span>
+            </div>
+            <div class="nombre">Nissan Versa 2022</div>
+            <div class="precio">$20,000</div>
+            <div class="etiqueta" data-categoria="nuevo">Auto nuevo</div>
+            <button class="botn-comprar"><a href="Autos/Auto3.html">Ver más</a></button>
+        </div>
+
+        <div class="tarjeta" data-capacidad="2500" data-marca="Ford" data-precio="28500">
+            <div class="imagen-con-etiqueta">
+              <img src="Imagenes/imgAutos/ford2023.jpg" alt="Ford Ranger">
+              <span class="estado1">Nuevo</span>
+            </div>
+            <div class="nombre">Ford Ranger 2023</div>
+            <div class="precio">$28,500</div>
+            <div class="etiqueta" data-categoria="nuevo">Auto nuevo</div>
+            <button class="botn-comprar"><a href="Autos/Auto6.html">Ver más</a></button>
+        </div>
+
+        <div class="tarjeta" data-capacidad="1800" data-marca="Volkswagen" data-precio="24000">
+            <div class="imagen-con-etiqueta">
+              <img src="Imagenes/imgAutos/jetta2023.jpg" alt="Volkswagen Jetta">
+              <span class="estado1">Nuevo</span>
+            </div>
+            <div class="nombre">Volkswagen Jetta 2023</div>
+            <div class="precio">$24,000</div>
+            <div class="etiqueta" data-categoria="nuevo">Auto nuevo</div>
+            <button class="botn-comprar"><a href="Autos/Auto9.html">Ver más</a></button>
+        </div>
+
+        <div class="tarjeta" data-capacidad="1600" data-marca="Jeep" data-precio="23000">
+            <div class="imagen-con-etiqueta">
+              <img src="Imagenes/imgAutos/jeep2022.jpg" alt="Jeep Renegade">
+              <span class="estado1">Nuevo</span>
+            </div>
+            <div class="nombre">Jeep Renegade 2022</div>
+            <div class="precio">$23,000</div>
+            <div class="etiqueta" data-categoria="nuevo">Auto nuevo</div>
+            <button class="botn-comprar"><a href="Autos/Auto11.html">Ver más</a></button>
+        </div>
+        
+        <div class="tarjeta" data-capacidad="1800" data-marca="Hyundai" data-precio="8500">
+            <div class="imagen-con-etiqueta">
+              <img src="Imagenes/imgAutos/elantra2016.jpg" alt="Hyundai Elantra">
+              <span class="estado1 usado">Usado</span>
+            </div> 
+            <div class="nombre">Hyundai Elantra 2016</div>
+            <div class="precio">$8,500</div>
+            <div class="etiqueta" data-categoria="usado">Auto usado</div>
+            <button class="botn-comprar"><a href="Autos/Auto2.html">Ver más</a></button>
+        </div>
+        
+        <div class="tarjeta" data-capacidad="1400" data-marca="Chevrolet" data-precio="11300">
+            <div class="imagen-con-etiqueta">
+              <img src="Imagenes/imgAutos/onix2019.jpg" alt="Chevrolet Onix">
+              <span class="estado1 usado">Usado</span>
+            </div>
+            <div class="nombre">Chevrolet Onix 2019</div>
+            <div class="precio">$11,300</div>
+            <div class="etiqueta" data-categoria="usado">Auto usado</div>
+            <button class="botn-comprar"><a href="Autos/Auto4.html">Ver más</a></button>
+        </div>
+
+        
+        <div class="tarjeta" data-capacidad="2000" data-marca="Mazda" data-precio="10200">
+            <div class="imagen-con-etiqueta">
+              <img src="Imagenes/imgAutos/mazda2018.jpg" alt="Mazda 3">
+              <span class="estado1 usado">Usado</span>
+            </div>
+            <div class="nombre">Mazda 3 2018</div>
+            <div class="precio">$10,200</div>
+            <div class="etiqueta" data-categoria="usado">Auto usado</div>
+            <button class="botn-comprar"><a href="Autos/Auto5.html">Ver más</a></button>
+        </div>
+
+        <div class="tarjeta" data-capacidad="1600" data-marca="Suzuki" data-precio="6900">
+            <div class="imagen-con-etiqueta">
+              <img src="Imagenes/imgAutos/suzuki2015.jpg" alt="Suzuki Swift">
+              <span class="estado1 usado">Usado</span>
+            </div>
+            <div class="nombre">Suzuki Swift 2015</div>
+            <div class="precio">$6,900</div>
+            <div class="etiqueta" data-categoria="usado">Auto usado</div>
+            <button class="botn-comprar"><a href="Autos/Auto7.html">Ver más</a></button>
+        </div>
+
+        
+        <div class="tarjeta" data-capacidad="2000" data-marca="Renault" data-precio="12700">
+            <div class="imagen-con-etiqueta">
+              <img src="Imagenes/imgAutos/duster2020.jpg" alt="Renault Duster">
+              <span class="estado1 usado">Usado</span>
+            </div>
+            <div class="nombre">Renault Duster 2020</div>
+            <div class="precio">$12,700</div>
+            <div class="etiqueta" data-categoria="usado">Auto usado</div>
+            <button class="botn-comprar"><a href="Autos/Auto8.html">Ver más</a></button>
+        </div>
+
+        <div class="tarjeta" data-capacidad="1800" data-marca="Honda" data-precio="10600">
+            <div class="imagen-con-etiqueta">
+              <img src="Imagenes/imgAutos/civic2017.jpg" alt="Honda Civic">
+              <span class="estado1 usado">Usado</span>
+            </div>
+            <div class="nombre">Honda Civic 2017</div>
+            <div class="precio">$10,600</div>
+            <div class="etiqueta" data-categoria="usado">Auto usado</div>
+            <button class="botn-comprar"><a href="Autos/Auto10.html">Ver más</a></button>
+        </div>
+
+        <div class="tarjeta" data-capacidad="1400" data-marca="Chevrolet" data-precio="5700">
+            <div class="imagen-con-etiqueta">
+              <img src="Imagenes/imgAutos/aveo2014.jpg" alt="Chevrolet Aveo">
+              <span class="estado1 usado">Usado</span>
+            </div>
+            <div class="nombre">Chevrolet Aveo 2014</div>
+            <div class="precio">$5,700</div>
+            <div class="etiqueta" data-categoria="usado">Auto usado</div>
+            <button class="botn-comprar"><a href="Autos/Auto12.html">Ver más</a></button>
+        </div>
+  </div>
+
+
+  <div id="formulario-auto" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar">&times;</span>
+      <h2>Agregar Nuevo Vehículo</h2>
+      <form id="form-agregar-auto">
+        <label>Nombre:</label>
+        <input type="text" id="nombre-auto" required>
+        <br>
+        <label>Marca:</label>
+        <input type="text" id="marca-auto" required>
+        <br>
+        <label>Capacidad (cc):</label>
+        <input type="number" id="capacidad-auto" required>
+        <br>
+        <label>Precio ($):</label>
+        <input type="number" id="precio-auto" required>
+        <br>
+        <label>Categoría:</label>
+        <select id="categoria-auto">
+          <option value="nuevo">Nuevo</option>
+          <option value="usado">Usado</option>
+        </select>
+        <br>
+        <label>URL de imagen:</label>
+        <input type="text" id="imagen-auto" required>
+
+        <button type="submit">Agregar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="ScriptAutos.js"></script>
+</body>
+
+<footer class="footer">
+        <div class="footer-contenido">
+            <div class="footer-columna">
+                <h3>MultiMovil</h3>
+                <p>Tu solución en autos, bicicletas y maquinas de pesaje.</p>
+            </div>
+        <div class="footer-columna">
+            <h4>Enlaces</h4>
+            <ul>
+                <li><a href="Principal.html">Inicio</a></li>
+                <li><a href="AutosNuevos.html">Autos</a></li>
+                <li><a href="Bicicletas.html">Bicicletas</a></li>
+                <li><a href="EquipodePesaje.html">Equipo de Pesaje y Balanzas</a></li>
+            </ul>
+        </div>
+        <div class="footer-columna">
+            <h4>Contacto</h4>
+            <p>Email: movicentro.com</p>
+            <p>Tel: +54 635 213</p>
+            <p><a href="https://es-la.facebook.com/">Facebook</a></p>
+            <p><a href="https://www.instagram.com/">Instagram</a></p>
+        </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 MoviCentro. Todos los derechos reservados.
+        </div>
+</footer>
+
+</html>

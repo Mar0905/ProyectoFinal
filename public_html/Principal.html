@@ -1,0 +1,231 @@
+<html>
+    <head>
+        <title>MoviCentro</title>
+        <link rel="stylesheet" href="StylePrincipal.css">
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..."
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    <header class="header">
+        <div class="logo">
+          <a href="Principal.html">
+            <img src="Imagenes/Img/logo.png" alt="Logo" />
+            <span class="brand-name">MULTIMOVIL</span>
+          </a>
+        </div>
+
+        <nav class="nav">
+          <ul class="nav-menu">
+            <li class="nav-item dropdown" data-menu="autos">
+              <a href="#" class="dropdown-toggle"><i class="fas fa-car icon"></i> Autos</a>
+              <ul class="dropdown-menu">
+                <li><a href="AutosNuevos.html">Autos Nuevos</a></li>
+                <li><a href="Promociones.html">Promociones</a></li>
+                <li><a href="SoliCotizacion.html">Financiamiento</a></li>
+                <li><a href="Compra.html">Solicitar Cotizacion</a></li>
+                <li><a href="Garantia.html">Garantia</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown" data-menu="bicicletas">
+                <a href="#" class="dropdown-toggle"><i class="fas fa-bicycle icon"></i> Bicicletas</a>
+                <ul class="dropdown-menu">
+                    <li><a href="Bicicletas.html">Modelos</a></li>
+                    <li><a href="Comparacion.html">Comparación de modelos</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown" data-menu="pesaje">
+                <a href="#" class="dropdown-toggle"><i class="fas fa-balance-scale icon"></i> Equipos de Pesaje</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="EquipodePesaje.html">Balanzas</a></li>
+                        <li><a href="#">Conoce Más</a></li>
+                    </ul>
+            </li>
+
+            <li class="nav-item dropdown" data-menu="contacto">
+                <a href="#" class="dropdown-toggle"><i class="fas fa-phone icon"></i> Contáctanos</a>
+                <ul class="dropdown-menu">
+                    <li><a href="Concesionario.html">Encuentranos</a></li>
+                    <li><a href="Consultas.html">Consultas</a></li>
+                    <li><a href="Consultas.html">Reclamos</a></li>
+                    <li><a href="PreguntasFre.html">FAQ</a></li>
+                </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="dealership">
+          <a href="Concesionario.html" target="_blank">
+            <i class="fas fa-map-marker-alt icon"></i> Concesionarios
+          </a>
+        </div>
+    </header>
+    
+    <body>
+        
+        <div class="floating-menu">
+            <button onclick="location.href='AutosNuevos.html'" class="floating-btn" title="Autos"><i class="fas fa-car"></i></button>
+            <button onclick="location.href='Concesionario.html'" class="floating-btn" title="Contactanos"><i class="fas fa-headphones"></i></button>
+            <button onclick="location.href='Compra.html'" class="floating-btn" title="Compra"><i class="fas fa-shopping-cart"></i></button>
+        </div>
+        
+        <div class="slider">
+            <input type="radio" name="radio-btn" id="slide1" checked>
+            <input type="radio" name="radio-btn" id="slide2">
+            <input type="radio" name="radio-btn" id="slide3">
+
+            <div class="slides">
+                <div class="slide"><a href="AutosNuevos.html">
+                        <img src="Imagenes/Img/Slide1.png" alt="Imagen 1"></a>
+              </div>
+              <div class="slide"><a href="Bicicletas.html">
+                  <img src="Imagenes/Img/Slide2.png" alt="Imagen 2"></a>
+              </div>
+              <div class="slide"><a href="EquipodePesaje.html">
+                  <img src="Imagenes/Img/Slide3.png" alt="Imagen 3">
+              </div></a>
+            </div>
+
+            <div class="navigation-manual">
+              <label for="slide1" class="manual-btn"></label>
+              <label for="slide2" class="manual-btn"></label>
+              <label for="slide3" class="manual-btn"></label>
+            </div>
+        </div>
+    
+        <marquee>
+            Encuentra lo mejor de Autos (Nuevos y Usados), Bicicletas y Equipo de Pesaje.
+        </marquee>
+
+        <div class="card-container">
+            <div class="card">
+                <h3>Toyota Corolla (Sedán compacto)</h3>
+                <img src="Imagenes/Img/Corolla.png" alt="Producto">
+                <p>Desde S/. 50,000</p>
+                <hr>
+                <button class="btnC"><a href="SoliCotizacion.html">Solicitar Cotización</a></button>
+                <button class="btnM"><a href="Auto1.html">Ver más</a></button>
+            </div>
+            <div class="card">
+                <h3>Ford Ranger <br>(Pick-up)</h3>            
+                <img src="Imagenes/Img/Ford.png" alt="Producto">
+                <p>Desde S/. 70,000</p>
+                <hr>
+                <button class="btnC">Solicitar Cotización</button>
+                <button class="btnM">Ver más</button>
+            </div>
+            <div class="card">
+                <h3>Mazda CX-5 (SUV mediano)</h3>
+                <img src="Imagenes/Img/Mazda.png" alt="Producto">
+                <p>Desde S/. 40,000</p>
+                <hr>
+                <button class="btnC">Solicitar Cotización</button>
+                <button class="btnM">Ver más</button>
+            </div>  
+            <div class="card">
+                <h3>Chevrolet Onix <br>2019</h3>
+                <img src="Imagenes/Img/Onix.png" alt="Producto">
+                <p>Desde S/. 44.900</p>
+                <hr>
+                <button class="btnC">Solicitar Cotización</button>
+                <button class="btnM">Ver más</button>
+            </div> 
+        </div>
+        
+        <div class="More">
+            <button><a href="AutosNuevos.html">Conoce Más</a></button>
+        </div>
+    
+        <div class="marquee-contenedor">
+            <hr>
+            <div class="marquee">
+                <img src="Imagenes/Img/toyota.png" alt="Toyota">
+                <img src="Imagenes/Img/tesla.png" alt="Tesla">
+                <img src="Imagenes/Img/Hyundai.png" alt="Hyundai">
+                <img src="Imagenes/Img/Nissan.png" alt="Nissan">
+                <img src="Imagenes/Img/Ferrari.png" alt="Ferrari">
+                <img src="Imagenes/Img/Audi.png" alt="Audi">
+                <img src="Imagenes/Img/Lamborghini.png" alt="Lamborghini">
+                <img src="Imagenes/Img/honda.png" alt="Honda">
+            </div>
+            <hr>
+        </div>
+    
+        <div class="banner">
+            <img src="Imagenes/Img/BannerBici.jpg" alt="Producto">
+            <div class="superpuesto">
+                <h3>La Mayor <br> Variedad de <br> Bicicletas</h3>
+                <button><a href="Bicicletas.html">Conoce Más<a></button>
+            </div>   
+        </div>
+    
+        <section class="noticias">
+            <h1>Descubre qué está pasando con Toyota</h1>
+            <div class="contenedor-noticias">
+              <div class="noticia-principal">
+                <img src="Imagenes/Img/Noticia1.jpg" alt="Noticia1">
+                <div class="contenido">
+                  <h2>Te Brindamos las mejores opciones de finanzacion y garantia “MULTIMOVIL FINANZAS”</h2>
+                  <a href="#">Ver más.</a>
+                  <p class="fecha">Mayo. 10, 2025</p>
+                </div>
+              </div>
+              <div class="noticias-secundarias">
+                <div class="noticia-secundaria">
+                  <img src="Imagenes/Img/Noticia2.jpg" alt="Noticia2">
+                  <div class="contenido">
+                    <h3>¿Cuál es la función de nuestras balanzas certificadas...?</h3>
+                    <a href="#">Ver más.</a>
+                    <p class="fecha">Mayo. 17, 2025</p>
+                  </div>
+                </div>
+                <div class="noticia-secundaria">
+                  <img src="Imagenes/Img/Noticia3.jpg" alt="Noticia3">
+                  <div class="contenido">
+                    <h3>La nueva Bicicleta multiterreno...</h3>
+                    <a href="#">Ver más.</a>
+                    <p class="fecha">Mayo. 22, 2025</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>   
+    </body>    
+        
+    <footer class="footer">
+        <div class="footer-contenido">
+            <div class="footer-columna">
+                <h3>MultiMovil</h3>
+                <p>Tu solución en autos, bicicletas y maquinas de pesaje.</p>
+            </div>
+        <div class="footer-columna">
+            <h4>Enlaces</h4>
+            <ul>
+                <li><a href="Principal.html">Inicio</a></li>
+                <li><a href="AutosNuevos.html">Autos</a></li>
+                <li><a href="Bicicletas.html">Bicicletas</a></li>
+                <li><a href="EquipodePesaje.html">Equipo de Pesaje y Balanzas</a></li>
+            </ul>
+        </div>
+        <div class="footer-columna">
+            <h4>Contacto</h4>
+            <p>Email: movicentro.com</p>
+            <p>Tel: +54 635 213</p>
+            <p><a href="https://es-la.facebook.com/">Facebook</a></p>
+            <p><a href="https://www.instagram.com/">Instagram</a></p>
+        </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 MoviCentro. Todos los derechos reservados.
+        </div>
+    </footer>
+    
+    <script src="ScriptPrincipal.js"></script>
+</html>

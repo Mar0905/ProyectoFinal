@@ -1,0 +1,202 @@
+<html>
+    <head>
+        <title>MoviCentro</title>
+        <link rel="stylesheet" href="StyleSoliCotizacion.css">
+        <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..."
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    <header class="header">
+        <div class="logo">
+          <a href="Principal.html">
+            <img src="Imagenes/Img/logo.png" alt="Logo" />
+            <span class="brand-name">MULTIMOVIL</span>
+          </a>
+        </div>
+
+        <nav class="nav">
+          <ul class="nav-menu">
+            <li class="nav-item dropdown" data-menu="autos">
+              <a href="#" class="dropdown-toggle"><i class="fas fa-car icon"></i> Autos</a>
+              <ul class="dropdown-menu">
+                <li><a href="AutosNuevos.html">Autos Nuevos</a></li>
+                <li><a href="Promociones.html">Promociones</a></li>
+                <li><a href="SoliCotizacion.html">Financiamiento</a></li>
+                <li><a href="Compra.html">Solicitar Cotizacion</a></li>
+                <li><a href="Garantia.html">Garantia</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown" data-menu="bicicletas">
+                <a href="#" class="dropdown-toggle"><i class="fas fa-bicycle icon"></i> Bicicletas</a>
+                <ul class="dropdown-menu">
+                    <li><a href="Bicicletas.html">Modelos</a></li>
+                    <li><a href="Comparacion.html">Comparación de modelos</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown" data-menu="pesaje">
+                <a href="#" class="dropdown-toggle"><i class="fas fa-balance-scale icon"></i> Equipos de Pesaje</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="EquipodePesaje.html">Balanzas</a></li>
+                        <li><a href="#">Conoce Más</a></li>
+                    </ul>
+            </li>
+
+            <li class="nav-item dropdown" data-menu="contacto">
+                <a href="#" class="dropdown-toggle"><i class="fas fa-phone icon"></i> Contáctanos</a>
+                <ul class="dropdown-menu">
+                    <li><a href="Concesionario.html">Encuentranos</a></li>
+                    <li><a href="Consultas.html">Consultas</a></li>
+                    <li><a href="Consultas.html">Reclamos</a></li>
+                    <li><a href="PreguntasFre.html">FAQ</a></li>
+                </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="dealership">
+          <a href="Concesionario.html" target="_blank">
+            <i class="fas fa-map-marker-alt icon"></i> Concesionarios
+          </a>
+        </div>
+    </header>
+    
+    <body>
+        
+        <div class="floating-menu">
+            <button onclick="location.href='AutosNuevos.html'" class="floating-btn" title="Autos"><i class="fas fa-car"></i></button>
+            <button onclick="location.href='Concesionario.html'" class="floating-btn" title="Contactanos"><i class="fas fa-headphones"></i></button>
+            <button onclick="location.href='Compra.html'" class="floating-btn" title="Compra"><i class="fas fa-shopping-cart"></i></button>
+        </div>
+        
+        <div class="Banner">
+            <img src="Imagenes/Img/Financiamientobanner.png" alt="FinBanner"/>
+            <h1>Financiamiento</h1>
+            <p>Realiza tu cotización aquí</p>
+        </div>
+        <div class="FormularioTop">
+            <h1>Solicita tu proximo Auto</h1>
+            <p>Llena el formulario y te contestaremos en menos de 24 horas</p>
+
+        <form class="FormularioTop">
+          <label for="tipoDocumento">Tipo de Documento</label>
+          <select class="select" name="tipoDocumento" required>
+            <option value="">Seleccione</option>
+            <option value="DNI">DNI</option>
+            <option value="RUC">RUC</option>
+          </select>
+
+          <label for="Documento">Número de Documento</label>
+          <input type="text" id="Documento" name="documento" placeholder="12345678" required />
+
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Juan" required />
+
+          <label for="apellido">Apellido</label>
+          <input type="text" id="apellido" name="apellido" placeholder="Pérez" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="ejemplo@mail.com" required />
+
+          <label for="codCiudad">Código de Ciudad</label>
+          <select name="codCiudad" required>
+            <option value="">Seleccione</option>
+            <option value="01">01 - Lima</option>
+            <option value="02">02 - Arequipa</option>
+          </select>
+
+          <label for="telefono">Teléfono</label>
+          <input type="text" name="telefono" placeholder="653236" required />
+
+          <label for="celular">Celular</label>
+          <input type="text" name="celular" placeholder="987654321" required />
+
+          <label for="departamento">Departamento</label>
+          <select name="departamento" required>
+            <option value="">Seleccione</option>
+            <option value="Lima">Lima</option>
+            <option value="Cusco">Cusco</option>
+          </select>
+
+          <label for="Model">Modelo</label>
+          <input type="text" id="Model" name="modelo" placeholder="Yaris" required />
+
+          <label for="version">Versión</label>
+          <select name="version" required>
+            <option value="">Seleccione</option>
+            <option value="Full">Full</option>
+            <option value="Sport">Sport</option>
+          </select>
+
+          <label for="color">Color</label>
+          <select name="color" required>
+            <option value="">Seleccione</option>
+            <option value="Rojo">Rojo</option>
+            <option value="Negro">Negro</option>
+          </select>
+
+          <div class="condiciones">
+            <label>
+              <input type="radio" name="Clausu" class="radioClausu" required />
+              Acepto que Toyota utilice mi información para los fines contenidos en la cláusula. <a href="#">Ver detalle</a>
+            </label>
+          </div>
+
+          <div class="condiciones">
+            <label>
+              <input type="radio" name="TermyCon" class="radioTermyCon" required />
+              Al enviar el formulario, acepto los términos y condiciones y la política de privacidad.
+            </label>
+          </div>
+
+          <div class="btnEnviar">
+            <button type="submit">Enviar</button>
+          </div>
+        </form>
+
+        <div id="modalResumen" class="modal hidden">
+          <div class="modal-content">
+            <span id="cerrarModal" class="close">&times;</span>
+            <h2>Resumen de Datos</h2>
+            <div id="resumenDatos"></div>
+            <button id="confirmarEnvio">Confirmar y Enviar</button>
+          </div>
+        </div>
+      </div>
+        <script src="ScriptCotizacion.js"></script>
+    </body>    
+        <footer class="footer">
+            <div class="footer-contenido">
+                <div class="footer-columna">
+                    <h3>MultiMovil</h3>
+                    <p>Tu solución en autos, bicicletas y maquinas de pesaje.</p>
+                </div>
+            <div class="footer-columna">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="Principal.html">Inicio</a></li>
+                    <li><a href="AutosNuevos.html">Autos</a></li>
+                    <li><a href="Bicicletas.html">Bicicletas</a></li>
+                    <li><a href="EquipodePesaje.html">Equipo de Pesaje y Balanzas</a></li>
+                </ul>
+            </div>
+            <div class="footer-columna">
+                <h4>Contacto</h4>
+                <p>Email: movicentro.com</p>
+                <p>Tel: +54 635 213</p>
+                <p><a href="https://es-la.facebook.com/">Facebook</a></p>
+                <p><a href="https://www.instagram.com/">Instagram</a></p>
+            </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 MoviCentro. Todos los derechos reservados.
+            </div>
+        </footer>
+         
+    </html>

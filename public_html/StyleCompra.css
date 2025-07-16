@@ -1,0 +1,421 @@
+body {
+    font-family: "Instrument Sans-Bold", Helvetica;
+    background-color: #d9d6d8;
+    margin: 0;
+    padding: 80px 0 0 0; /* top, right, bottom, left */
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Instrument Sans-Bold", Helvetica;
+    }
+    
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 30px;
+        border-bottom: 1px solid #ccc;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        box-sizing: border-box;
+        height: 80px;
+        width: 100%;
+        background-color: #0f214d;
+        color: white;
+    }
+    
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    .logo span {
+        font-weight: bold;
+        font-size: 20px;
+        align-items: center;
+    }
+    
+    .logo a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+    }
+    
+    .brand-name {
+        display: inline;
+    }
+
+    .nav-menu {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+        position: relative;
+    }
+
+    .nav-item {
+        position: relative;
+    }
+
+    .dropdown-toggle {
+        cursor: pointer;
+    }
+
+    .dealership {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 20px;
+    }
+    
+    .icon {
+        display: none;
+        margin-right: 5px;
+    }
+
+    .label {
+        display: inline;
+    }
+
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: calc(100% + 20px);
+        left: 0;
+        background-color: white;
+        color: black;
+        min-width: 200px;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .nav-item.active .dropdown-menu {
+        display: block;
+      }
+
+      .dropdown-menu li a {
+        display: block;
+        padding: 10px 15px;
+        color: #0f214d;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .dropdown-menu li a:hover {
+        background-color: #f2f2f2;
+      }
+    
+    marquee{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: black;
+    }
+    
+    .floating-menu {
+        position: fixed;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        z-index: 1000;
+        background: white;
+        padding: 10px 5px;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+      .floating-btn {
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 50%;
+        font-size: 20px;
+        transition: background-color 0.3s ease, transform 0.2s;
+    }
+
+      .floating-btn:hover {
+        background-color: #f0f0f0;
+        transform: scale(1.1);
+    }
+
+      .floating-btn i {
+        color: #0f214d;
+    }
+
+    .title {
+        font-family: "Instrument Sans-Bold", Helvetica;
+        font-weight: 700;
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        padding: 2rem 2rem 1rem 10vw;
+        line-height: 1.5;
+        margin-top: 2rem;
+    }
+
+    .subtitle {
+        font-family: "Instrument Sans-Medium", Helvetica;
+        font-weight: 400;
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+    }
+
+    .Banner {
+        position: relative;
+        display: block;
+    }
+
+    .Banner img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .Banner h1 {
+        position: absolute;
+        top: 30px;
+        left: 10%;
+        font-size: clamp(2rem, 6vw, 3.5rem);
+        color: white;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .Banner p {
+        position: absolute;
+        top: 85%;
+        left: 10%;
+        font-size: clamp(1rem, 4vw, 2rem);
+        color: white;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+        text-transform: uppercase;
+    }
+
+    .catalogo-autos {
+        display: flex;
+        padding: 20px;
+        font-family: sans-serif;
+        padding-left: 4cm;
+      }
+
+      .filtros {
+        width: 350px;
+        padding: 20px;
+        background: #f7f7f7;
+        border-radius: 10px;
+      }
+
+      .filtro-grupo {
+        margin-bottom: 20px;
+      }
+
+      .filtro-grupo h4 {
+        margin-bottom: 8px;
+        font-size: 0.95rem;
+        color: #333;
+      }
+
+      .filtro-grupo label {
+        display: block;
+        margin: 4px 0;
+        font-size: 0.9rem;
+      }
+
+      .rango-precio {
+        display: flex;
+        gap: 10px;
+      }
+
+      .rango-precio input[type="range"] {
+        flex: 1;
+      }
+
+      .valores-precio {
+        margin-top: 5px;
+        font-weight: bold;
+      }
+
+      #btnReset {
+        display: block;
+        margin-top: 10px;
+        padding: 6px 12px;
+        background: #124f90;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      #btnReset:hover {
+        background: #a30000;
+      }
+
+      .contenido-autos {
+        flex-grow: 1;
+        margin-left: 30px;
+        padding-right: 4cm;
+      }
+
+      .lista-autos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .auto-card {
+        width: 180px;
+        padding: 10px;
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      .auto-card img {
+        width: 100%;
+        border-radius: 8px;
+      }
+
+      .auto-card h4 {
+        margin: 10px 0 5px;
+        font-size: 1rem;
+      }
+
+      .auto-card span {
+        font-weight: bold;
+        color: #124f90;
+      }
+
+    
+    .footer {
+      background-color: #0d1121;
+      color: white;
+      padding: 40px 20px 20px;
+      font-family:"Instrument Sans-Bold", Helvetica;
+    }
+
+    .footer-contenido {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-columna {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .footer h3, .footer h4 {
+      margin-bottom: 10px;
+    }
+
+    .footer p, .footer a {
+      font-size: 14px;
+      color: #ddd;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      font-size: 13px;
+      border-top: 1px solid #0d3a6b;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 1024px) {
+        .icon {
+            display: inline;
+        }
+
+        .label,
+        .brand-name {
+            display: none;
+        }
+
+        .nav-menu {
+            gap: 15px;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        
+        .floating-menu {
+            display: none;
+        }
+        
+        .icon {
+            display: inline;
+        }
+
+        .label {
+            display: none;
+        }
+
+        .nav-menu {
+            gap: 15px;
+        }
+        
+        .brand-name {
+            display: none;
+        }
+        
+            .Banner h1 {
+        top: 10px;
+        font-size: clamp(1.5rem, 6vw, 2rem);
+        }
+
+        .Banner p {
+            top: 75%;
+            font-size: clamp(0.9rem, 4vw, 1.5rem);
+        }
+
+        .title {
+            padding-left: 5vw;
+            text-align: center;
+        }
+
+        .buscar {
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .consecionarios {
+            flex-direction: column;
+            align-items: center;
+        }
+    }

@@ -1,0 +1,186 @@
+<html>
+    <head>
+        <title>Promociones</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="StyleConsultas.css"/>
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..."
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"/>
+    </head>
+    
+    <header class="header">
+        <div class="logo">
+          <a href="Principal.html">
+            <img src="Imagenes/Img/logo.png" alt="Logo" />
+            <span class="brand-name">MULTIMOVIL</span>
+          </a>
+        </div>
+
+        <nav class="nav">
+          <ul class="nav-menu">
+            <li class="nav-item dropdown" data-menu="autos">
+              <a href="#" class="dropdown-toggle"><i class="fas fa-car icon"></i> Autos</a>
+              <ul class="dropdown-menu">
+                <li><a href="AutosNuevos.html">Autos Nuevos</a></li>
+                <li><a href="#">Autos Seminuevos</a></li>
+                <li><a href="Promociones.html">Promociones</a></li>
+                <li><a href="SoliCotizacion.html">Financiamiento</a></li>
+                <li><a href="Compra.html">Solicitar Cotizacion</a></li>
+                <li><a href="Garantia.html">Garantia</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown" data-menu="bicicletas">
+                <a href="#" class="dropdown-toggle"><i class="fas fa-bicycle icon"></i> Bicicletas</a>
+                <ul class="dropdown-menu">
+                    <li><a href="Bicicletas.html">Modelos</a></li>
+                    <li><a href="Comparacion.html">Comparación de modelos</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown" data-menu="pesaje">
+                <a href="#" class="dropdown-toggle"><i class="fas fa-balance-scale icon"></i> Equipos de Pesaje</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="EquipodePesaje.html">Balanzas</a></li>
+                        <li><a href="#">Conoce Más</a></li>
+                    </ul>
+            </li>
+
+            <li class="nav-item dropdown" data-menu="contacto">
+                <a href="#" class="dropdown-toggle"><i class="fas fa-phone icon"></i> Contáctanos</a>
+                <ul class="dropdown-menu">
+                    <li><a href="Concesionario.html">Encuentranos</a></li>
+                    <li><a href="Consultas.html">Consultas</a></li>
+                    <li><a href="Consultas.html">Reclamos</a></li>
+                    <li><a href="PreguntasFre.html">FAQ</a></li>
+                </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="dealership">
+          <a href="Concesionario.html" target="_blank">
+            <i class="fas fa-map-marker-alt icon"></i> Concesionarios
+          </a>
+        </div>
+    </header>
+    
+    <body>
+        
+        <div class="floating-menu">
+            <button onclick="location.href='AutosNuevos.html'" class="floating-btn" title="Autos"><i class="fas fa-car"></i></button>
+            <button onclick="location.href='Concesionario.html'" class="floating-btn" title="Contactanos"><i class="fas fa-headphones"></i></button>
+            <button onclick="location.href='Compra.html'" class="floating-btn" title="Compra"><i class="fas fa-shopping-cart"></i></button>
+        </div>
+
+        <div class="Banner">
+            <img src="Imagenes/ImgConcesionario/Consecionarios.jpg" alt="Concecionario"/>
+            <h1>Consultas y Reclamos</h1>
+            <p>Comunicate con nosotros</p>
+        </div>
+        
+        <div class="title">
+            Llena el formulario y nos comunicaremos contigo:
+        </div>
+        
+        <section class="formulario-contacto">
+            <p><strong>Multimovil</strong> es distribuidor exclusivo. Para compras, contacta a tu concesionario autorizado.</p>
+
+            <h3>¿Qué deseas realizar?</h3>
+            <div class="opciones">
+                <button id="btnConsulta" class="activo">Consulta</button>
+                <button id="btnReclamo">Reclamo</button>
+            </div>
+
+            <form id="formContacto">
+                <div class="grid-form">
+                    <input type="text" placeholder="Nombres" name="nombres" required>
+                    <input type="text" placeholder="Apellidos" name="apellidos" required>
+                    <input type="text" placeholder="DNI" name="dni" required>
+                    <input type="text" placeholder="Teléfono" name="telefono" required>
+                    <input type="text" placeholder="Celular" name="celular">
+                    <input type="email" placeholder="E-mail" name="email" required>
+                    <input type="text" placeholder="Dirección" name="direccion">
+
+                    <select name="departamento" required>
+                        <option disabled selected>Departamento</option>
+                        <option>Lima</option>
+                        <option>Arequipa</option>
+                        <option>Cusco</option>
+                    </select>
+
+                    <select name="concesionario" required>
+                        <option disabled selected>Concesionario</option>
+                        <option>Multimovil Lima</option>
+                        <option>Multimovil Norte</option>
+                    </select>
+
+                    <select name="motivo" id="motivoSelect" required>
+                        <option disabled selected>Motivo de contacto</option>
+                        <option>Consulta general</option>
+                        <option>Postventa</option>
+                        <option>Demora en atención</option>
+                        <option>Reclamo técnico</option>
+                    </select>
+
+                    <input type="text" placeholder="Placa" name="placa">
+                    <input type="text" placeholder="Propietario" name="propietario">
+                    <select name="modelo">
+                        <option disabled selected>Modelo</option>
+                        <option>Agya</option>
+                        <option>Yaris</option>
+                        <option>Corolla</option>
+                    </select>
+                </div>
+
+                <textarea placeholder="Deje su mensaje" name="mensaje" rows="4" required></textarea>
+
+                <div class="condiciones">
+                    <label><input type="checkbox" required> He leído y acepto los <a href="#">Términos y Condiciones</a></label>
+                    <label><input type="checkbox" required> He leído y acepto la <a href="#">Política de Privacidad</a></label>
+                </div>
+
+                <div class="botones">
+                    <button type="reset" class="btn-reset">Borrar</button>
+                    <button type="submit" class="btn-enviar">Enviar</button>
+                </div>
+            </form>
+        </section>
+        
+    </body>    
+        
+    <footer class="footer">
+        <div class="footer-contenido">
+            <div class="footer-columna">
+                <h3>MultiMovil</h3>
+                <p>Tu solución en autos, bicicletas y maquinas de pesaje.</p>
+            </div>
+        <div class="footer-columna">
+            <h4>Enlaces</h4>
+            <ul>
+                <li><a href="Principal.html">Inicio</a></li>
+                <li><a href="AutosNuevos.html">Autos</a></li>
+                <li><a href="Bicicletas.html">Bicicletas</a></li>
+                <li><a href="EquipodePesaje.html">Equipo de Pesaje y Balanzas</a></li>
+            </ul>
+        </div>
+        <div class="footer-columna">
+            <h4>Contacto</h4>
+            <p>Email: movicentro.com</p>
+            <p>Tel: +54 635 213</p>
+            <p><a href="https://es-la.facebook.com/">Facebook</a></p>
+            <p><a href="https://www.instagram.com/">Instagram</a></p>
+        </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 MoviCentro. Todos los derechos reservados.
+        </div>
+    </footer>
+    
+    <script src="ScriptConsultas.js"></script>
+    
+</html>
