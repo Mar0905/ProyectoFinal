@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("form-agregar-auto");
   const catalogo = document.getElementById("catalogo-autos");
 
-  // Asegurar que los elementos existen
   if (!btnAbrir || !modal || !cerrar || !form || !catalogo) {
     console.error("❌ Error: Elementos del formulario no encontrados");
     return;
@@ -86,3 +85,64 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const filtroCategoria = document.getElementById("filtro-categoria");
+  const filtroMarca = document.getElementById("filtro-marca");
+  const filtroCapacidad = document.getElementById("filtro-capacidad");
+  const filtroPrecio = document.getElementById("filtro-precio");
+  const limpiarBtn = document.getElementById("limpiar-filtros");
+
+  const tarjetas = document.querySelectorAll(".tarjeta");
+
+  function filtrarAutos() {
+    const categoria = filtroCategoria.value.toLowerCase();
+    const marca = filtroMarca.value.toLowerCase();
+    const capacidad = filtroCapacidad.value;
+    const precio = filtroPrecio.value;
+
+    tarjetas.forEach(tarjeta => {
+      const tarjetaCategoria = tarjeta.querySelector(".etiqueta")?.dataset.categoria.toLowerCase();
+      const tarjetaMarca = tarjeta.dataset.marca.toLowerCase();
+      const tarjetaCapacidad = parseInt(tarjeta.dataset.capacidad);
+      const tarjetaPrecio = parseFloat(tarjeta.dataset.precio);
+
+      let mostrar = true;
+
+      if (categoria && tarjetaCategoria !== categoria) {
+        mostrar = false;
+      }
+
+      if (marca && tarjetaMarca !== marca) {
+        mostrar = false;
+      }
+
+      if (capacidad && tarjetaCapacidad !== parseInt(capacidad)) {
+        mostrar = false;
+      }
+
+      if (precio) {
+        const [min, max] = precio.split("-").map(Number);
+        if (tarjetaPrecio < min || tarjetaPrecio > max) {
+          mostrar = false;
+        }
+      }
+
+      tarjeta.style.display = mostrar ? "block" : "none";
+    });
+  }
+
+  [filtroCategoria, filtroMarca, filtroCapacidad, filtroPrecio].forEach(filtro => {
+    filtro.addEventListener("change", filtrarAutos);
+  });
+
+  limpiarBtn.addEventListener("click", () => {
+    filtroCategoria.value = "";
+    filtroMarca.value = "";
+    filtroCapacidad.value = "";
+    filtroPrecio.value = "";
+
+    tarjetas.forEach(tarjeta => tarjeta.style.display = "block");
+  });
+});
+

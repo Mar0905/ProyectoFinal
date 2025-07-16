@@ -477,4 +477,127 @@
             display: none;
         }
 
+    
+    a {
+    text-decoration: none;
+    color: white;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Instrument Sans-Bold", Helvetica;
+}
+
+.header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 30px;
+        border-bottom: 1px solid #ccc;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        box-sizing: border-box;
+        height: 80px;
+        width: 100%;
+        background-color: #0f214d;
+        color: white;
     }
+    
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    .logo span {
+        font-weight: bold;
+        font-size: 20px;
+        align-items: center;
+    }
+    
+    .logo a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+    }
+    
+    .brand-name {
+        display: inline;
+    }
+
+    .nav-menu {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+        position: relative;
+    }
+
+    .nav-item {
+        position: relative;
+    }
+
+    .dropdown-toggle {
+        cursor: pointer;
+    }
+
+    .dealership {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 20px;
+    }
+    
+    .icon {
+        display: none;
+        margin-right: 5px;
+    }
+
+    .label {
+        display: inline;
+    }
+
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: calc(100% + 20px);
+        left: 0;
+        background-color: white;
+        color: black;
+        min-width: 200px;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .nav-item.active .dropdown-menu {
+        display: block;
+      }
+
+      .dropdown-menu li a {
+        display: block;
+        padding: 10px 15px;
+        color: #0f214d;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .dropdown-menu li a:hover {
+        background-color: #f2f2f2;
+      }
+
+
