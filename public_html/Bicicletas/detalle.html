@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detalle de Bicicleta</title>
+  <link rel="stylesheet" href="StyleBicicleta.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="../Principal.html">
+        <img src="../Imagenes/Img/logo.png" alt="Logo" />
+        <span class="brand-name">MULTIMOVIL</span>
+      </a>
+    </div>
+    <nav class="nav">
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="../AutosNuevos.html"><i class="fas fa-car icon"></i><span class="label"> Autos</span></a></li>
+        <li class="nav-item"><a href="../Bicicletas.html"><i class="fas fa-bicycle icon"></i><span class="label"> Bicicletas</span></a></li>
+        <li class="nav-item"><a href="../EquipodePesaje.html"><i class="fas fa-balance-scale icon"></i><span class="label"> Pesaje</span></a></li>
+        <li class="nav-item"><a href="../Concesionario.html"><i class="fas fa-phone icon"></i><span class="label"> Contacto</span></a></li>
+      </ul>
+    </nav>
+    <div class="dealership">
+      <a href="../Concesionario.html" target="_blank">
+        <i class="fas fa-map-marker-alt icon"></i> <span class="label">Concesionarios</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- VIDEO + TÍTULO CENTRADO -->
+  <div class="video-contenedor">
+    <video id="video-producto" class="video-fondo" autoplay muted loop>
+      <source src="Imagenes/imgBicicletas/VideoBicicletas.mp4" type="video/mp4">
+      Tu navegador no soporta el video.
+    </video>
+    <div class="overlay-texto solo-centro">
+      <div class="columna centro">
+        <h1 id="titulo-producto">Cargando...</h1>
+        <p id="descripcion-producto">Explora el camino con libertad</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFORMACIÓN DEL PRODUCTO -->
+  <section class="info">
+    <div id="info-producto"></div>
+  </section>
+
+  <!-- SCRIPT -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const producto = JSON.parse(localStorage.getItem("productoSeleccionado"));
+      if (!producto) {
+        document.getElementById("info-producto").innerHTML = "<p>No se encontró información del producto.</p>";
+        return;
+      }
+
+      document.getElementById("titulo-producto").textContent = producto.nombre;
+      // Opcional: cambia el subtítulo si deseas desde localStorage
+      // document.getElementById("descripcion-producto").textContent = producto.descripcion || "Explora el camino con libertad";
+
+      const videoElement = document.getElementById("video-producto").querySelector("source");
+      videoElement.src = "../" + producto.video;
+      document.getElementById("video-producto").load();
+
+      document.getElementById("info-producto").innerHTML = `
+        <div class="info-principal">
+          <div><strong>Marca:</strong><br>${producto.marca}</div>
+          <div><strong>Categoría:</strong><br>${producto.categoria}</div>
+          <div><strong>Peso:</strong><br>${producto.peso}</div>
+          <div><strong>Rodado:</strong><br>${producto.rodado}</div>
+          <div><strong>Precio:</strong><br>S/${producto.precio.toFixed(2)}</div>
+        </div>
+        <div class="selector-bicicleta">
+        <input type="radio" name="color" id="color1" checked>
+        <input type="radio" name="color" id="color2">
+        <input type="radio" name="color" id="color3">
+        <input type="radio" name="color" id="color4">
+        <input type="radio" name="color" id="color5">
+
+        <div class="imagen-principal">
+        <img src="${producto.imagenes.white}" alt="Bicicleta blanca" class="img-white">
+        <img src="${producto.imagenes.gray}" alt="Bicicleta gris" class="img-gray">
+        <img src="${producto.imagenes.black}" alt="Bicicleta negra" class="img-black">
+        <img src="${producto.imagenes.red}" alt="Bicicleta roja" class="img-red">
+        <img src="${producto.imagenes.blue}" alt="Bicicleta azul" class="img-blue">
+        </div>
+
+        <div class="colores">
+          <label class="white" for="color1" title="Blanco"></label>
+          <label class="gray" for="color2" title="Gris"></label>
+          <label class="black" for="color3" title="Negro"></label>
+          <label class="red" for="color4" title="Rojo"></label>
+          <label class="blue" for="color5" title="Azul"></label>
+          </div>
+        </div>
+        <div class="botones">
+          <button class="cotizar" onclick="window.location.href='../SoliCotizacion.html'">Solicitar Cotización</button>
+          <button class="solicitar" onclick="window.location.href='../Compra.html'">Comprar Ahora</button>
+        </div>
+      `;
+    });
+  </script>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-contenido">
+      <div class="footer-columna">
+        <h3>MultiMovil</h3>
+        <p>Tu solución en autos, bicicletas y máquinas de pesaje.</p>
+      </div>
+      <div class="footer-columna">
+        <h4>Enlaces</h4>
+        <ul>
+          <li><a href="../Principal.html">Inicio</a></li>
+          <li><a href="../AutosNuevos.html">Autos</a></li>
+          <li><a href="../Bicicletas.html">Bicicletas</a></li>
+          <li><a href="../EquipodePesaje.html">Pesaje</a></li>
+        </ul>
+      </div>
+      <div class="footer-columna">
+        <h4>Contacto</h4>
+        <p>Email: movicentro.com</p>
+        <p>Tel: +54 635 213</p>
+        <p><a href="https://es-la.facebook.com/">Facebook</a></p>
+        <p><a href="https://www.instagram.com/">Instagram</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 MoviCentro. Todos los derechos reservados.
+    </div>
+  </footer>
+</body>
+</html>
